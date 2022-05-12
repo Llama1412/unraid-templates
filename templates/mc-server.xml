@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MinecraftServer</Name>
+  <Repository>itzg/minecraft-server</Repository>
+  <Registry>https://hub.docker.com/r/itzg/minecraft-server</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://external-preview.redd.it/INBHMCNdcPNCBvgGn3yQ-RH4jiAhFP4bde7-wCC2xiw.png?auto=webp&amp;amp;s=7fbcf884991ea6c916da84752af364fbf962687b</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1652390162</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>25565</HostPort>
+        <ContainerPort>25565</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/minecraft_vanilla</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>SPIGOT</Value>
+      <Name>TYPE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>EULA</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Type of server" Target="TYPE" Default="" Mode="" Description="Type of server: SPIGOT, FABRIC, FORGE or PAPER" Type="Variable" Display="always" Required="false" Mask="false">SPIGOT</Config>
+  <Config Name="EULA" Target="EULA" Default="true" Mode="" Description="Accept the EULA" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Server Port" Target="25565" Default="25565" Mode="tcp" Description="Container Port: 25565" Type="Port" Display="always" Required="true" Mask="false">25565</Config>
+  <Config Name="Data Path" Target="/data" Default="/mnt/user/appdata/minecraft_vanilla" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/minecraft_vanilla</Config>
+</Container>
