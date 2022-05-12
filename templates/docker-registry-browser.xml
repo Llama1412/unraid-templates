@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Container version="1">
+  <Name>Docker Registry Browser</Name>
+  <Repository>klausmeyer/docker-registry-browser/</Repository>
+  <Registry>https://hub.docker.com/r/klausmeyer/docker-registry-browser/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Project>https://github.com/klausmeyer/docker-registry-browser</Project>
+  <Overview>Web Interface for the Docker Registry HTTP API V2 written in Ruby on Rails.</Overview>
+  <Category>Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/Llama1412/unraid-templates/master/templates/docker-registry-browser.xml</TemplateURL>
+  <Icon>https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png</Icon>
+  <Config Name="WebUI Port" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false"/>
+</Container>
