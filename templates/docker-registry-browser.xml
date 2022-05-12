@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="1">
   <Name>Docker Registry Browser</Name>
-  <Repository>klausmeyer/docker-registry-browser/</Repository>
+  <Repository>klausmeyer/docker-registry-browser</Repository>
   <Registry>https://hub.docker.com/r/klausmeyer/docker-registry-browser/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
