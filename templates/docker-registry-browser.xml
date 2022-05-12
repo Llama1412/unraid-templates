@@ -1,16 +1,51 @@
 <?xml version="1.0"?>
-<Container version="1">
+<Container version="2">
   <Name>Docker Registry Browser</Name>
   <Repository>klausmeyer/docker-registry-browser</Repository>
   <Registry>https://hub.docker.com/r/klausmeyer/docker-registry-browser/</Registry>
   <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
   <Privileged>false</Privileged>
+  <Support/>
   <Project>https://github.com/klausmeyer/docker-registry-browser</Project>
   <Overview>Web Interface for the Docker Registry HTTP API V2 written in Ruby on Rails.</Overview>
   <Category>Tools:</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/Llama1412/unraid-templates/master/templates/docker-registry-browser.xml</TemplateURL>
   <Icon>https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png</Icon>
-  <Config Type="Port" Name="WebUI Port" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Mask="false" Display="always" Required="true"/>
-  <Config Type="Variable" Name="Registry URL" Target="DOCKER_REGISTRY_URL" Default="http://localhost:5000" Description="URL of the registry" Mask="false" Display="always" Required="true"/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1652386246</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Web Interface for the Docker Registry HTTP API V2 written in Ruby on Rails.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value>http://192.168.0.32:5000</Value>
+      <Name>DOCKER_REGISTRY_URL</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>ENABLE_DELETE_IMAGES</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI Port" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Registry URL" Target="DOCKER_REGISTRY_URL" Default="http://localhost:5000" Mode="{3}" Description="URL of the registry" Type="Variable" Display="always" Required="true" Mask="false">http://192.168.0.32:5000</Config>
+  <Config Name="Enable deletion" Target="ENABLE_DELETE_IMAGES" Default="false" Mode="" Description="Allow deletion of images from the registry. Also requires enabling in the registry's container." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
 </Container>
